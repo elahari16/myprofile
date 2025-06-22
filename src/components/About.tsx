@@ -125,9 +125,8 @@ const About: React.FC = () => {
             
             <motion.div variants={itemVariants} className="mt-8">
               <a 
-                href="https://docs.google.com/document/d/19lEuZEdTyYitRe2Lv17LLlBHLiHZ_mDp/edit?usp=sharing&ouid=112558413164205700415&rtpof=true&sd=true"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://docs.google.com/document/d/19lEuZEdTyYitRe2Lv17LLlBHLiHZ_mDp/export?format=pdf"
+                download="Hariharan_Elangovan_Resume.pdf"
                 className="btn-secondary"
               >
                 Download Resume
