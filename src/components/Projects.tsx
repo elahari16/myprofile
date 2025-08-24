@@ -21,7 +21,7 @@ const projects: Project[] = [
     id: 1,
     title: "MILTRANS: Context-Aware AI Translation Engine for Military Standard Operating Procedures",
     category: "Natural Language Processing (NLP) / Machine Learning",
-    imageUrl: "icon/miltrans.png",
+    imageUrl: "/myprofile/icon/miltrans.png",
     description: "MILTRANS is an AI-powered multilingual SOP translation system developed for the Indian defense sector. It extracts Standard Operating Procedures (SOPs) from PDFs, websites, and images, and provides context-aware translations into 22 Indian languages using advanced NLP and OCR techniques. The system reduces training delays by 40%, improves comprehension, and ensures data security with MongoDB Atlas integration.",
     technologies: ["Python", "NLP (Transformers, OCR)", "MongoDB Atlas", "Cloud Deployment"],
     link: "https://github.com/elahari16/MILTRANS-Context-Aware-AI-Translation-Engine-for-Military-Standard-Operating-Procedures"
@@ -40,7 +40,7 @@ const projects: Project[] = [
     id: 3,
     title: "Mini Social Media App with Toxic Comment Classification",
     category: "Machine Learning",
-    imageUrl: "icon/toxic comment classification.png",
+    imageUrl: "/myprofile/icon/toxic comment classification.png",
     description: "Built a mini social app with a toxic comment detection system. Integrated a logistic regression model to detect and filter toxic comments in real-time using Flask API. The system analyzes user comments and flags inappropriate content before it's posted.",
     technologies: ["Python", "Flask", "Node.js", "MongoDB", "Scikit-learn"],
     link: "https://github.com/elahari16/social_media_comment_classification"

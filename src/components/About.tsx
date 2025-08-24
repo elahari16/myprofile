@@ -75,7 +75,7 @@ const About: React.FC = () => {
               variants={itemVariants}
               className="text-dark-600 dark:text-dark-300 mb-8 leading-relaxed"
             >
-              Passionate about scalable AI for domains like geospatial and workplace analytics. Currently working as a Data Science Intern at VCODEZ, where I build regression models and deploy machine learning solutions.
+              Passionate about scalable AI for domains like geospatial and workplace analytics. Currently seeking full-time opportunities in data science and machine learning roles where I can contribute to impactful AI-driven solutions.
             </motion.p>
             
             <motion.div 
@@ -94,7 +94,7 @@ const About: React.FC = () => {
               <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-white dark:bg-dark-800 shadow-md text-center">
                 <Briefcase className="w-8 h-8 text-secondary-600 dark:text-secondary-400 mb-2" />
                 <h3 className="font-bold text-lg mb-1">Experience</h3>
-                <p className="text-center text-dark-500 dark:text-dark-400 text-sm">Data Science Intern</p>
+                <p className="text-center text-dark-500 dark:text-dark-400 text-sm">Internship Experience</p>
               </div>
               
               <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-white dark:bg-dark-800 shadow-md text-center">
