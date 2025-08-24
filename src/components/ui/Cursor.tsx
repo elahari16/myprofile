@@ -35,7 +35,9 @@ const Cursor: React.FC = () => {
     };
     
     const onMouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      requestAnimationFrame(() => {
+        setPosition({ x: e.clientX, y: e.clientY });
+      });
     };
     
     const onMouseEnter = () => {
@@ -84,10 +86,9 @@ const Cursor: React.FC = () => {
           borderColor: linkHovered ? 'rgba(14, 165, 233, 0.5)' : 'rgba(14, 165, 233, 1)',
         }}
         transition={{
-          type: 'spring',
-          damping: 30,
-          stiffness: 300,
-          mass: 0.5,
+          type: 'tween',
+          duration: 0.1,
+          ease: 'easeOut',
         }}
       />
       <motion.div
@@ -99,10 +100,9 @@ const Cursor: React.FC = () => {
           opacity: hidden ? 0 : linkHovered ? 0 : 1,
         }}
         transition={{
-          type: 'spring',
-          damping: 20,
-          stiffness: 400,
-          mass: 0.3,
+          type: 'tween',
+          duration: 0.08,
+          ease: 'easeOut',
         }}
       />
     </>
