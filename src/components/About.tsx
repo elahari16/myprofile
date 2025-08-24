@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Award, Briefcase, GraduationCap, Mail, Phone, MapPin } from 'lucide-react';
+import DataFlowAnimation from './ui/DataFlowAnimation';
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -29,8 +30,9 @@ const About: React.FC = () => {
   };
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark-950">
-      <div className="container mx-auto">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-secondary-50 to-primary-50 dark:from-dark-800 dark:to-dark-900 relative">
+      <DataFlowAnimation />
+      <div className="container mx-auto relative z-10">
         <motion.div 
           ref={ref}
           initial="hidden"
@@ -40,7 +42,7 @@ const About: React.FC = () => {
         >
           <motion.div
             variants={itemVariants}
-            className="relative"
+            className="relative max-w-md mx-auto"
           >
             <div className="border-8 border-primary-200 dark:border-primary-900 rounded-2xl overflow-hidden transform -rotate-3 transition-transform hover:rotate-0 duration-300">
               <img 
@@ -98,7 +100,7 @@ const About: React.FC = () => {
               <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-white dark:bg-dark-800 shadow-md text-center">
                 <Award className="w-8 h-8 text-accent-500 dark:text-accent-400 mb-2" />
                 <h3 className="font-bold text-lg mb-1">Projects</h3>
-                <p className="text-center text-dark-500 dark:text-dark-400 text-sm">3+ Projects</p>
+                <p className="text-center text-dark-500 dark:text-dark-400 text-sm">4+ Projects</p>
               </div>
             </motion.div>
             
@@ -117,9 +119,14 @@ const About: React.FC = () => {
               
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-primary-600 dark:text-primary-400 mr-3" />
-                <a href="tel:+919361688757" className="text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  +91 93616 88757
-                </a>
+                <div className="flex flex-col space-y-1">
+                  <a href="tel:+919361688757" className="text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    +91 93616 88757
+                  </a>
+                  <a href="tel:+916369506071" className="text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    +91 63695 06071
+                  </a>
+                </div>
               </div>
             </motion.div>
             

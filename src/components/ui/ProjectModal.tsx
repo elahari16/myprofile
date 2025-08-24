@@ -109,7 +109,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                 View Live <ExternalLink size={16} className="ml-2" />
               </a>
               <a 
-                href="https://github.com" 
+                href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-secondary flex items-center"

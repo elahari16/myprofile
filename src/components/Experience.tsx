@@ -19,7 +19,7 @@ const experiences: ExperienceItem[] = [
     role: "Data Science Intern",
     company: "VCODEZ",
     location: "Chennai, India",
-    period: "Mar 2025 - Present",
+    period: "Mar 2025 - Jul 2025",
     description: [
       "Building regression models for predictive analytics applications",
       "Deploying machine learning solutions using Flask",
@@ -103,7 +103,7 @@ const Experience: React.FC = () => {
                 {/* Timeline dot */}
                 <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary-500 dark:bg-primary-400 border-4 border-white dark:border-dark-900"></div>
                 
-                <div className={`bg-white dark:bg-dark-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow ${
+                <div className={`bg-white dark:bg-dark-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow text-left ${
                   index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
                 }`}>
                   <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-4">

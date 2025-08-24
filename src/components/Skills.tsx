@@ -67,11 +67,6 @@ const Skills: React.FC = () => {
     }
   };
 
-  const dailyTools = [
-    "Python", "SQL", "VS Code", "Jupyter", "Spyder", "Google Colab", 
-    "Power BI", "Excel", "Amazon Q"
-  ];
-
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark-950">
       <div className="container mx-auto">
@@ -122,21 +117,32 @@ const Skills: React.FC = () => {
         <div className="mt-20">
           <h3 className="text-2xl font-bold text-center mb-8 font-serif">Tools I Use Daily</h3>
           
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            {dailyTools.map((tool, index) => (
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-6">
+            {[
+              { name: "Python", icon: "icon/Python.png" },
+              { name: "SQL", icon: "icon/sql.png" },
+              { name: "VS Code", icon: "icon/vs code.png" },
+              { name: "Jupyter", icon: "icon/Jupyter.png" },
+              { name: "Spyder", icon: "icon/spyder.png" },
+              { name: "Google Colab", icon: "icon/google colab.png" },
+              { name: "Power BI", icon: "icon/power-bi.png" },
+              { name: "Excel", icon: "icon/excel.png" },
+              { name: "Amazon Q", icon: "icon/Amazon-q-.jpg" },
+              { name: "ChatGPT", icon: "icon/chat gbt.png" },
+              { name: "Google NotebookLM", icon: "icon/google note book lm.png" },
+              { name: "Blockbox AI", icon: "icon/block box ai.png" },
+            ].map((tool, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="flex flex-col items-center"
+                className="text-center hover:scale-105 transition-transform duration-300 flex flex-col items-center"
+                whileHover={{ scale: 1.05 }}
               >
-                <div className="w-16 h-16 bg-dark-100 dark:bg-dark-800 rounded-lg flex items-center justify-center mb-2">
-                  <span className="text-xl font-bold text-primary-600 dark:text-primary-400">
-                    {tool.charAt(0)}
-                  </span>
-                </div>
-                <span className="text-sm font-medium text-dark-600 dark:text-dark-400">{tool}</span>
+                <img 
+                  src={tool.icon} 
+                  alt={tool.name} 
+                  className="w-[50px] h-[50px] object-contain mb-3" 
+                />
+                <span className="text-sm font-medium text-dark-900 dark:text-white">{tool.name}</span>
               </motion.div>
             ))}
           </div>
