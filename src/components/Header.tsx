@@ -38,24 +38,24 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white/90 dark:bg-dark-900/90 backdrop-blur-sm shadow-md py-2' 
-          : 'bg-transparent py-4'
+        scrolled
+          ? 'bg-white/95 dark:bg-dark-900/95 backdrop-blur-md shadow-lg py-3'
+          : 'bg-white/90 dark:bg-dark-900/90 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <a 
             href="#hero" 
-            className="text-2xl font-bold font-serif text-primary-600 dark:text-primary-400"
+            className="text-2xl font-bold font-serif text-dark-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection('#hero');
             }}
           >
-            Hariharan
+            Hariharan Elangovan
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
                   <li key={link.name}>
                     <a 
                       href={link.href}
-                      className="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary-600 dark:after:bg-primary-400 after:transition-all hover:after:w-full"
+                      className="font-medium text-dark-700 dark:text-dark-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary-600 dark:after:bg-primary-400 after:transition-all hover:after:w-full px-3 py-2 rounded-md hover:bg-primary-50 dark:hover:bg-primary-900/20"
                       onClick={(e) => {
                         e.preventDefault();
                         scrollToSection(link.href);
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
             
             <button 
               onClick={toggleTheme} 
-              className="p-2 rounded-full hover:bg-dark-100 dark:hover:bg-dark-800 transition-colors"
+              className="p-2 rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors border border-gray-200 dark:border-dark-700"
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {theme === 'dark' ? (

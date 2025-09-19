@@ -40,21 +40,29 @@ const About: React.FC = () => {
           variants={containerVariants}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
-          <motion.div
-            variants={itemVariants}
-            className="relative max-w-md mx-auto"
-          >
-            <div className="border-8 border-primary-200 dark:border-primary-900 rounded-2xl overflow-hidden transform -rotate-3 transition-transform hover:rotate-0 duration-300">
-              <img 
-                src="https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg" 
-                alt="About me"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -right-5 -bottom-5 w-28 h-28 bg-white dark:bg-dark-800 rounded-lg shadow-xl p-4 flex items-center justify-center transform rotate-3">
-              <span className="font-bold text-lg text-dark-900 dark:text-white">Based in<br/>Chennai</span>
-            </div>
-          </motion.div>
+          <div>
+            <motion.div variants={itemVariants} className="text-center mb-6">
+              <p className="text-lg text-dark-500 dark:text-dark-400 italic font-medium">
+                "Graduated in tech, growing through data"
+              </p>
+            </motion.div>
+            
+            <motion.div
+              variants={itemVariants}
+              className="relative max-w-lg mx-auto"
+            >
+              <div className="border-4 border-primary-200 dark:border-primary-900 rounded-2xl overflow-hidden">
+                <img 
+                  src="/myprofile/my-profile.jpg" 
+                  alt="About me"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -right-3 -bottom-3 w-24 h-24 bg-white dark:bg-dark-800 rounded-lg shadow-xl p-3 flex items-center justify-center">
+                <span className="font-bold text-sm text-dark-900 dark:text-white text-center">Based in<br/>Chennai</span>
+              </div>
+            </motion.div>
+          </div>
           
           <div>
             <motion.div variants={itemVariants}>

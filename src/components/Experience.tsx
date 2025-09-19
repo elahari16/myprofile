@@ -146,9 +146,9 @@ const Experience: React.FC = () => {
         </motion.div>
         
         <div className="text-center mt-12">
-          <a 
-            href="/resume.pdf" 
-            download
+          <a
+            href="/Hariharan Elangovan DS.docx"
+            download="Hariharan Elangovan DS.docx"
             className="btn-secondary"
           >
             Download Full Resume

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Eye } from 'lucide-react';
-import profileImage from '/my-profile.jpg';
+import profileImage from '/new profile .png';
 import FloatingDataPoints from './ui/FloatingDataPoints';
 import ThemeToggle from './ui/ThemeToggle';
+import AvailabilityBanner from './ui/AvailabilityBanner';
 
 const Hero: React.FC = () => {
   const [visitorCount, setVisitorCount] = useState(0);
@@ -23,9 +24,9 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="min-h-screen flex flex-col justify-center pt-20 pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-50 via-secondary-50 to-accent-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-950 relative">
-      <ThemeToggle />
       <FloatingDataPoints />
       <div className="container mx-auto relative z-10">
+        <AvailabilityBanner />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -36,29 +37,29 @@ const Hero: React.FC = () => {
               Hi, I'm Hariharan Elangovan
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight font-serif">
-              Aspiring <span className="text-primary-600 dark:text-primary-400">Data Scientist</span> | <span className="text-secondary-600 dark:text-secondary-400">Machine Learning Engineer</span> | <span className="text-accent-500 dark:text-accent-400">AI</span>
+              Aspiring <span className="text-primary-600 dark:text-primary-400">Data Analytics</span> | <span className="text-secondary-600 dark:text-secondary-400">Data Scientist</span> | <span className="text-accent-500 dark:text-accent-400">Machine Learning Engineer</span> | <span className="text-accent-500 dark:text-accent-400">AI</span>
             </h1>
             <p className="text-lg sm:text-xl text-dark-600 dark:text-dark-300 mb-8 max-w-lg leading-relaxed">
-              Passionate about building AI-driven solutions that solve real-world problems. Experienced in machine learning, computer vision, and data analysis.
+              Passionate about building AI-driven solutions that solve real-world problems. Delivered 40% efficiency improvement in military training through MILTRANS AI translation system. Experienced in Python, ML, and computer vision.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a 
-                href="/myprofile/HARIHARAN ELANGOVAN Data Scientist.docx"
-                download="HARIHARAN ELANGOVAN Data Scientist.docx"
-                className="btn-primary"
+                href="/myprofile/Hariharan Elangovan DS.docx"
+                download="Hariharan Elangovan DS.docx"
+                className="btn-primary text-center"
               >
-                Download Resume
+                📄 Download Resume
               </a>
               <a 
                 href="#contact" 
-                className="btn-secondary"
+                className="btn-secondary text-center"
                 onClick={(e) => {
                   e.preventDefault();
                   document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Contact Me
+                💬 Let's Talk
               </a>
             </div>
             
@@ -109,8 +110,8 @@ const Hero: React.FC = () => {
               </div>
               <div className="absolute -left-4 -top-4 lg:-left-6 lg:-top-6 w-16 h-16 lg:w-24 lg:h-24 bg-dark-100 dark:bg-dark-800 rounded-lg p-2 flex items-center shadow-xl z-10">
                 <div className="flex flex-col">
-                  <span className="text-xl lg:text-2xl font-bold text-primary-600 dark:text-primary-400">4+</span>
-                  <span className="text-xs text-dark-600 dark:text-dark-300">Projects</span>
+                  <span className="text-xl lg:text-2xl font-bold text-primary-600 dark:text-primary-400">94%</span>
+                  <span className="text-xs text-dark-600 dark:text-dark-300">ML Accuracy</span>
                 </div>
               </div>
 
@@ -141,7 +142,7 @@ const Hero: React.FC = () => {
         
         <div className="text-center mt-12">
           <p className="text-xl text-dark-500 dark:text-dark-400 italic font-bold mb-4">
-            "Graduated in tech, growing through data"
+            "Turning data into insights, algorithms into impact"
           </p>
           <div className="flex items-center justify-center gap-2 mb-8">
             <Eye size={16} className="text-primary-600 dark:text-primary-400" />
