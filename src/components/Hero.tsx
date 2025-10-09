@@ -40,13 +40,13 @@ const Hero: React.FC = () => {
               Aspiring <span className="text-primary-600 dark:text-primary-400">Data Analytics</span> | <span className="text-secondary-600 dark:text-secondary-400">Data Scientist</span> | <span className="text-accent-500 dark:text-accent-400">Machine Learning Engineer</span> | <span className="text-accent-500 dark:text-accent-400">AI</span>
             </h1>
             <p className="text-lg sm:text-xl text-dark-600 dark:text-dark-300 mb-8 max-w-lg leading-relaxed">
-              Passionate about building AI-driven solutions that solve real-world problems. Delivered 40% efficiency improvement in military training through MILTRANS AI translation system. Experienced in Python, ML, and computer vision.
+              Passionate about building AI-driven solutions that solve real-world problems. Delivered 40% efficiency improvement in military training through MILTRANS AI translation system. Experienced in Python, ML, and computer vision. Also available to help with college-level projects for final-year students who need assistance.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a 
-                href="/myprofile/Hariharan Elangovan DS.docx"
-                download="Hariharan Elangovan DS.docx"
+              <a
+                href="/Hariharan elangovan CV.pdf"
+                download="Hariharan elangovan CV.pdf"
                 className="btn-primary text-center"
               >
                 📄 Download Resume

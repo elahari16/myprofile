@@ -12,7 +12,7 @@ const AvailabilityBanner: React.FC = () => {
       <div className="flex items-center justify-center gap-2">
         <CheckCircle size={16} className="text-green-600 dark:text-green-400" />
         <span className="text-sm font-medium text-green-800 dark:text-green-200">
-          🚀 Available for Full-Time Data Science Roles
+          🚀 Available for Full-Time Opportunities (Willing to Relocate Anywhere in India)
         </span>
       </div>
     </motion.div>
