@@ -147,8 +147,8 @@ const Experience: React.FC = () => {
         
         <div className="text-center mt-12">
           <a
-            href="/Hariharan Elangovan DS.docx"
-            download="Hariharan Elangovan DS.docx"
+            href="/Hariharan elangovan CV.pdf"
+            download="Hariharan elangovan CV.pdf"
             className="btn-secondary"
           >
             Download Full Resume

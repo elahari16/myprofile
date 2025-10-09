@@ -139,9 +139,9 @@ const About: React.FC = () => {
             </motion.div>
             
             <motion.div variants={itemVariants} className="mt-8">
-              <a 
-                href="https://docs.google.com/document/d/19lEuZEdTyYitRe2Lv17LLlBHLiHZ_mDp/export?format=pdf"
-                download="Hariharan_Elangovan_Resume.pdf"
+              <a
+                href="/Hariharan elangovan CV.pdf"
+                download="Hariharan elangovan CV.pdf"
                 className="btn-secondary"
               >
                 Download Resume
