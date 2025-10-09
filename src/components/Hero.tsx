@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a
-                href="/Hariharan elangovan CV.pdf"
+                href="/myprofile/Hariharan elangovan CV.pdf"
                 download="Hariharan elangovan CV.pdf"
                 className="btn-primary text-center"
               >
