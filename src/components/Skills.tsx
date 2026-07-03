@@ -71,12 +71,10 @@ const Skills: React.FC = () => {
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark-950">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block py-1 px-3 rounded-full bg-secondary-100 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-400 text-sm font-medium mb-4">
-            My Expertise
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-serif">Skills & Technologies</h2>
-          <p className="text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
-            I've developed a diverse skill set throughout my journey, focusing on data science, machine learning, and AI technologies.
+          <span className="section-tag mb-4">// my_expertise</span>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-serif text-dark-900 dark:text-white">Skills & <span className="gradient-text">Technologies</span></h2>
+          <p className="text-dark-600 dark:text-dark-400 max-w-2xl mx-auto">
+            A diverse skill set focused on computer vision, data science, machine learning, and AI technologies.
           </p>
         </div>
         
@@ -91,20 +89,20 @@ const Skills: React.FC = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-dark-50 dark:bg-dark-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
+              className="glass-card glass-card-hover p-6"
             >
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-white dark:bg-dark-700 flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-dark-900/70 border border-primary-500/25 flex items-center justify-center mr-4">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold">{category.title}</h3>
+                <h3 className="text-xl font-bold text-dark-900 dark:text-white">{category.title}</h3>
               </div>
-              
+
               <div className="flex flex-wrap gap-2 mt-4">
                 {category.skills.map((skill, idx) => (
-                  <span 
+                  <span
                     key={idx}
-                    className="text-sm py-1 px-3 rounded-full bg-white dark:bg-dark-700 text-dark-700 dark:text-dark-300"
+                    className="text-sm font-mono py-1 px-3 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-300"
                   >
                     {skill}
                   </span>
@@ -128,6 +126,7 @@ const Skills: React.FC = () => {
               { name: "Power BI", icon: "icon/power-bi.png" },
               { name: "Excel", icon: "icon/excel.png" },
               { name: "Amazon Q", icon: "icon/Amazon-q-.jpg" },
+              { name: "Claude", icon: "icon/claude.svg" },
               { name: "ChatGPT", icon: "icon/chat gbt.png" },
               { name: "Google NotebookLM", icon: "icon/google note book lm.png" },
               { name: "Blockbox AI", icon: "icon/block box ai.png" },

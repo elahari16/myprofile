@@ -5,19 +5,21 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Electric cyan — the "detection / bounding-box" accent
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
+          50: '#ecfeff',
+          100: '#cffafe',
+          200: '#a5f3fc',
+          300: '#67e8f9',
+          400: '#22d3ee',
+          500: '#06b6d4',
+          600: '#0891b2',
+          700: '#0e7490',
+          800: '#155e75',
+          900: '#164e63',
+          950: '#083344',
         },
+        // Teal support tone
         secondary: {
           50: '#f0fdfa',
           100: '#ccfbf1',
@@ -31,6 +33,7 @@ export default {
           900: '#134e4a',
           950: '#042f2e',
         },
+        // Warm confidence highlight (badges / awards)
         accent: {
           50: '#fffbeb',
           100: '#fef3c7',
@@ -44,18 +47,19 @@ export default {
           900: '#78350f',
           950: '#451a03',
         },
+        // Deep navy-black control-room background
         dark: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#020617',
+          50: '#f6f8fc',
+          100: '#eaeff7',
+          200: '#cbd5e8',
+          300: '#9fb0cf',
+          400: '#647ba6',
+          500: '#46577d',
+          600: '#33415c',
+          700: '#1f2a44',
+          800: '#131b30',
+          900: '#0a0f1f',
+          950: '#05080f',
         },
       },
       fontFamily: {
@@ -67,6 +71,11 @@ export default {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'slide-down': 'slideDown 0.5s ease-out',
+        'pulse-glow': 'pulseGlow 2.5s ease-in-out infinite',
+        'scan': 'scan 3.5s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'blink': 'blink 1.1s step-end infinite',
+        'grid-pan': 'gridPan 20s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -80,6 +89,28 @@ export default {
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        pulseGlow: {
+          '0%, 100%': { opacity: '0.5' },
+          '50%': { opacity: '1' },
+        },
+        scan: {
+          '0%': { transform: 'translateY(-100%)', opacity: '0' },
+          '10%': { opacity: '1' },
+          '90%': { opacity: '1' },
+          '100%': { transform: 'translateY(2000%)', opacity: '0' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-12px)' },
+        },
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
+        gridPan: {
+          '0%': { backgroundPosition: '0 0' },
+          '100%': { backgroundPosition: '40px 40px' },
         },
       },
     },

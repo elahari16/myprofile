@@ -27,14 +27,14 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
-            <a 
-              href="#hero" 
-              className="text-2xl font-bold font-serif text-primary-600 dark:text-primary-400 inline-block mb-4"
+            <a
+              href="#hero"
+              className="text-2xl font-bold font-serif gradient-text inline-block mb-4"
             >
-              Hariharan Elangovan
+              &lt;Hariharan Elangovan /&gt;
             </a>
-            <p className="text-dark-600 dark:text-dark-300 mb-6 max-w-md">
-              Aspiring Data Scientist specializing in machine learning, computer vision, and AI-driven solutions.
+            <p className="text-dark-600 dark:text-dark-400 mb-6 max-w-md">
+              Computer Vision AI Developer specializing in real-time multi-camera systems, machine learning, and AI-driven solutions.
             </p>
             <div className="flex space-x-4">
               <a 

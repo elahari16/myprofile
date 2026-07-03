@@ -4,7 +4,10 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import LiveDetection from './components/LiveDetection';
 import Experience from './components/Experience';
+import CaseStudy from './components/CaseStudy';
+import Metrics from './components/Metrics';
 import Certificates from './components/Certificates';
 import Leadership from './components/Leadership';
 import Contact from './components/Contact';
@@ -12,6 +15,7 @@ import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import Cursor from './components/ui/Cursor';
 import LoadingScreen from './components/ui/LoadingScreen';
+import ScrollProgress from './components/ui/ScrollProgress';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,14 +36,18 @@ function App() {
   return (
     <ThemeProvider>
       <Cursor />
-      <div className="min-h-screen bg-white dark:bg-dark-900 text-dark-900 dark:text-white transition-colors duration-300">
+      <ScrollProgress />
+      <div className="min-h-screen bg-white dark:bg-dark-950 text-dark-900 dark:text-dark-100 transition-colors duration-300">
         <Header />
         <main>
           <Hero />
           <About />
           <Skills />
           <Projects />
+          <LiveDetection />
           <Experience />
+          <CaseStudy />
+          <Metrics />
           <Certificates />
           <Leadership />
           <Contact />

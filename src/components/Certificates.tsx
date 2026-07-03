@@ -101,15 +101,15 @@ const CertificateCard: React.FC<{ certificate: Certificate }> = ({ certificate }
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="bg-white dark:bg-dark-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+    <div className="glass-card glass-card-hover overflow-hidden">
       <div className="p-6">
         <div className="flex items-center mb-4">
-          <div className="w-12 h-12 rounded-full bg-accent-100 dark:bg-accent-900 flex items-center justify-center mr-4 text-2xl">
+          <div className="w-12 h-12 rounded-full bg-accent-500/15 border border-accent-400/30 flex items-center justify-center mr-4 text-2xl">
             {certificate.icon}
           </div>
-          <h3 className="font-bold">{certificate.title}</h3>
+          <h3 className="font-bold text-dark-900 dark:text-white">{certificate.title}</h3>
         </div>
-        
+
         <div className="flex justify-between items-center text-sm text-dark-500 dark:text-dark-400 mb-3">
           <span>{certificate.issuer}</span>
           <span>{certificate.date}</span>
@@ -176,11 +176,9 @@ const Certificates: React.FC = () => {
     <section id="certificates" className="py-20 px-4 sm:px-6 lg:px-8 bg-dark-50 dark:bg-dark-900">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block py-1 px-3 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 text-sm font-medium mb-4">
-            My Credentials
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-serif">Certificates & Achievements</h2>
-          <p className="text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
+          <span className="section-tag mb-4">// my_credentials</span>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-serif text-dark-900 dark:text-white">Certificates & <span className="gradient-text">Achievements</span></h2>
+          <p className="text-dark-600 dark:text-dark-400 max-w-2xl mx-auto">
             A collection of my professional certifications and educational achievements that have helped shape my skills.
           </p>
         </div>
@@ -203,9 +201,9 @@ const Certificates: React.FC = () => {
         </motion.div>
         
         <div className="flex justify-center mt-12">
-          <div className="bg-white dark:bg-dark-800 rounded-xl p-6 shadow-md inline-flex items-center">
+          <div className="glass-card p-6 inline-flex items-center">
             <Award className="w-8 h-8 text-accent-500 dark:text-accent-400 mr-4" />
-            <p className="text-dark-600 dark:text-dark-300">
+            <p className="text-dark-600 dark:text-dark-400">
               Continuously expanding my knowledge through courses and certifications in data science and AI.
             </p>
           </div>

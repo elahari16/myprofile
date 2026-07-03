@@ -25,16 +25,19 @@ const LoadingScreen: React.FC = () => {
   ];
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-dark-900 dark:to-dark-800 flex items-center justify-center z-50">
-      <div className="text-center">
+    <div className="fixed inset-0 bg-dark-950 flex items-center justify-center z-50">
+      <div className="absolute inset-0 bg-detect-grid opacity-40" />
+      <div className="text-center relative z-10">
         {/* Logo/Name */}
-        <motion.h1 
-          className="text-4xl font-bold font-serif text-primary-600 dark:text-primary-400 mb-8"
+        <motion.h1
+          className="text-4xl font-bold font-serif mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Hariharan Elangovan
+          <span className="font-mono text-primary-400">[</span>
+          <span className="gradient-text"> Hariharan Elangovan </span>
+          <span className="font-mono text-primary-400">]</span>
         </motion.h1>
 
         {/* Neural Network */}
@@ -117,8 +120,8 @@ const LoadingScreen: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
         >
-          <div className="text-lg font-semibold text-dark-700 dark:text-dark-200">Neural Network Loading...</div>
-          <div className="text-sm text-dark-500 dark:text-dark-400">Initializing AI Portfolio</div>
+          <div className="text-lg font-semibold font-mono text-primary-300">Initializing vision system…</div>
+          <div className="text-sm font-mono text-dark-400">Loading detection pipeline</div>
         </motion.div>
       </div>
     </div>

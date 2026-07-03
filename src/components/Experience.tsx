@@ -15,6 +15,20 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    id: 3,
+    role: "Computer Vision AI Developer",
+    company: "Code Board Technologies",
+    location: "Chennai, Tamil Nadu",
+    period: "Apr 2026 - Present",
+    description: [
+      "Building a production real-time multi-camera computer-vision system for resident identification and tracking across an apartment/campus environment",
+      "Developing face enrollment and recognition pipelines and resident registration services (Python backend, REST APIs)",
+      "Implementing multi-camera person tracking using YOLO object detection with the BoT-SORT tracker, tuning overlap and ID-lock thresholds to reduce identity switches",
+      "Integrating the vision pipeline with Frigate and a real-time backend (WebSocket / FastAPI), deployed via Docker"
+    ],
+    technologies: ["Python", "YOLO", "BoT-SORT", "FastAPI", "WebSocket", "Frigate", "Docker", "OpenCV"]
+  },
+  {
     id: 1,
     role: "Data Science Intern",
     company: "VCODEZ",
@@ -71,12 +85,10 @@ const Experience: React.FC = () => {
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-dark-50 dark:bg-dark-900">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block py-1 px-3 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 text-sm font-medium mb-4">
-            Work Experience
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-serif">Professional Journey</h2>
-          <p className="text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
-            My professional experience in data science and machine learning roles.
+          <span className="section-tag mb-4">// work_experience</span>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-serif text-dark-900 dark:text-white">Professional <span className="gradient-text">Journey</span></h2>
+          <p className="text-dark-600 dark:text-dark-400 max-w-2xl mx-auto">
+            My professional experience across computer vision, data science and machine learning roles.
           </p>
         </div>
         
@@ -101,9 +113,9 @@ const Experience: React.FC = () => {
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary-500 dark:bg-primary-400 border-4 border-white dark:border-dark-900"></div>
-                
-                <div className={`bg-white dark:bg-dark-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow text-left ${
+                <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary-400 border-4 border-dark-50 dark:border-dark-950 shadow-[0_0_16px_2px_rgba(34,211,238,0.7)]"></div>
+
+                <div className={`glass-card glass-card-hover p-6 text-left ${
                   index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
                 }`}>
                   <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-4">
@@ -133,7 +145,7 @@ const Experience: React.FC = () => {
                     {exp.technologies.map((tech, i) => (
                       <span 
                         key={i}
-                        className="text-xs py-1 px-2 rounded bg-dark-100 dark:bg-dark-700 text-dark-600 dark:text-dark-300"
+                        className="text-xs font-mono py-1 px-2 rounded bg-primary-500/10 border border-primary-500/25 text-primary-300"
                       >
                         {tech}
                       </span>
@@ -147,8 +159,8 @@ const Experience: React.FC = () => {
         
         <div className="text-center mt-12">
           <a
-            href="/Hariharan elangovan CV.pdf"
-            download="Hariharan elangovan CV.pdf"
+            href="/Hariharan_Elangovan_Resume.docx"
+            download="Hariharan_Elangovan_Resume.docx"
             className="btn-secondary"
           >
             Download Full Resume

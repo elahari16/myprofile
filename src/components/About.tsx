@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Award, Briefcase, GraduationCap, Mail, Phone, MapPin } from 'lucide-react';
 import DataFlowAnimation from './ui/DataFlowAnimation';
+import DetectionFrame from './ui/DetectionFrame';
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -51,46 +52,46 @@ const About: React.FC = () => {
               variants={itemVariants}
               className="relative max-w-lg mx-auto"
             >
-              <div className="border-4 border-primary-200 dark:border-primary-900 rounded-2xl overflow-hidden">
-                <img 
-                  src="/myprofile/my-profile.jpg" 
-                  alt="About me"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -right-3 -bottom-3 w-24 h-24 bg-white dark:bg-dark-800 rounded-lg shadow-xl p-3 flex items-center justify-center">
-                <span className="font-bold text-sm text-dark-900 dark:text-white text-center">Based in<br/>Chennai</span>
+              <DetectionFrame label="person" confidence="0.98" className="rounded-2xl">
+                <div className="rounded-2xl overflow-hidden border border-primary-500/30 neon-border">
+                  <img
+                    src="/myprofile/my-profile.jpg"
+                    alt="About me"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </DetectionFrame>
+              <div className="absolute -right-3 -bottom-3 glass-card z-20 px-3 py-2 shadow-[0_0_24px_-6px_rgba(34,211,238,0.6)]">
+                <span className="font-mono text-sm font-bold text-primary-300 text-center block">Based in<br/>Chennai</span>
               </div>
             </motion.div>
           </div>
           
           <div>
             <motion.div variants={itemVariants}>
-              <span className="inline-block py-1 px-3 rounded-full bg-secondary-100 dark:bg-secondary-900 text-secondary-600 dark:text-secondary-400 text-sm font-medium mb-4">
-                About Me
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6 font-serif">Aspiring Data Scientist with a passion for AI-driven solutions</h2>
+              <span className="section-tag mb-4">// about_me</span>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 font-serif text-dark-900 dark:text-white">Computer Vision AI Developer building <span className="gradient-text">production AI-driven systems</span></h2>
             </motion.div>
             
             <motion.p 
               variants={itemVariants}
               className="text-dark-600 dark:text-dark-300 mb-6 leading-relaxed"
             >
-              Aspiring Data Scientist with hands-on experience in machine learning, computer vision, and data analysis. Skilled in end-to-end ML solution development with a strong foundation in Python, SQL, and statistical modeling.
+              Computer Vision AI Developer with hands-on experience building production real-time vision systems, machine learning, and data analysis. Skilled in end-to-end ML solution development with a strong foundation in Python, SQL, and statistical modeling.
             </motion.p>
             
             <motion.p 
               variants={itemVariants}
               className="text-dark-600 dark:text-dark-300 mb-8 leading-relaxed"
             >
-              Passionate about scalable AI for domains like geospatial and workplace analytics. Currently seeking full-time opportunities in data science and machine learning roles where I can contribute to impactful AI-driven solutions.
+              Passionate about scalable AI for domains like geospatial and workplace analytics. Currently working as a Computer Vision AI Developer at Code Board Technologies, building production real-time computer-vision systems.
             </motion.p>
             
             <motion.div 
               variants={itemVariants}
               className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8"
             >
-              <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-white dark:bg-dark-800 shadow-md text-center">
+              <div className="flex flex-col items-center justify-center p-4 glass-card glass-card-hover text-center">
                 <GraduationCap className="w-8 h-8 text-primary-600 dark:text-primary-400 mb-2" />
                 <h3 className="font-bold text-lg mb-1">Education</h3>
                 <div className="text-center text-dark-500 dark:text-dark-400 text-sm">
@@ -99,13 +100,13 @@ const About: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-white dark:bg-dark-800 shadow-md text-center">
+              <div className="flex flex-col items-center justify-center p-4 glass-card glass-card-hover text-center">
                 <Briefcase className="w-8 h-8 text-secondary-600 dark:text-secondary-400 mb-2" />
                 <h3 className="font-bold text-lg mb-1">Experience</h3>
-                <p className="text-center text-dark-500 dark:text-dark-400 text-sm">Internship Experience</p>
+                <p className="text-center text-dark-500 dark:text-dark-400 text-sm">Full-time CV Developer + Internships</p>
               </div>
               
-              <div className="flex flex-col items-center justify-center p-4 rounded-lg bg-white dark:bg-dark-800 shadow-md text-center">
+              <div className="flex flex-col items-center justify-center p-4 glass-card glass-card-hover text-center">
                 <Award className="w-8 h-8 text-accent-500 dark:text-accent-400 mb-2" />
                 <h3 className="font-bold text-lg mb-1">Projects</h3>
                 <p className="text-center text-dark-500 dark:text-dark-400 text-sm">4+ Projects</p>
@@ -140,8 +141,8 @@ const About: React.FC = () => {
             
             <motion.div variants={itemVariants} className="mt-8">
               <a
-                href="/Hariharan elangovan CV.pdf"
-                download="Hariharan elangovan CV.pdf"
+                href="/Hariharan_Elangovan_Resume.docx"
+                download="Hariharan_Elangovan_Resume.docx"
                 className="btn-secondary"
               >
                 Download Resume

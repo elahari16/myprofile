@@ -19,30 +19,30 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "MILTRANS: Context-Aware AI Translation Engine for Military Standard Operating Procedures",
-    category: "Natural Language Processing (NLP) / Machine Learning",
-    imageUrl: "/myprofile/icon/miltrans.png",
-    description: "🎯 IMPACT: Reduced military training delays by 40% and improved comprehension by 60%. MILTRANS is an AI-powered multilingual SOP translation system for the Indian defense sector. Extracts SOPs from PDFs, websites, and images, providing context-aware translations into 22 Indian languages using advanced NLP and OCR techniques with MongoDB Atlas integration.",
-    technologies: ["Python", "NLP (Transformers, OCR)", "MongoDB Atlas", "Cloud Deployment"],
-    link: "https://github.com/elahari16/MILTRANS-Context-Aware-AI-Translation-Engine-for-Military-Standard-Operating-Procedures",
-    certificateLink: "/myprofile/certificates/project 2.pdf"
-  },
-  {
-    id: 2,
     title: "Workplace Activity Recognition System",
     category: "Computer Vision",
-    imageUrl: "https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=800",
-    description: "🎯 RESULTS: Achieved 92% accuracy in safety violation detection with real-time processing. Developed a computer vision-based safety monitoring system using YOLO object detection to identify unsafe activities and equipment usage, automatically sending alerts when safety protocols are violated.",
+    imageUrl: "https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    description: "Computer vision-based safety monitoring system using YOLO object detection to identify unsafe activities and equipment usage, automatically sending alerts when safety protocols are violated. Demonstrated reliable detection of safety violations in testing with real-time processing.",
     technologies: ["YOLO", "OpenCV", "TensorFlow", "Streamlit", "Roboflow"],
     link: "https://github.com/elahari16/Workplace-activity-recognition-system",
     certificateLink: "https://drive.google.com/file/d/1K9Hkdvvruf0J_BE_zFXJS73OC_TR-rnv/view?usp=drive_link"
+  },
+  {
+    id: 2,
+    title: "MILTRANS: Context-Aware AI Translation Engine for Military Standard Operating Procedures",
+    category: "Natural Language Processing (NLP) / Machine Learning",
+    imageUrl: "/myprofile/icon/miltrans.png",
+    description: "AI-powered multilingual SOP translation system for the Indian defense sector. Provides context-aware translation across 22 Indian languages from PDF, web, and image sources using NLP and OCR, with MongoDB Atlas integration.",
+    technologies: ["Python", "NLP (Transformers, OCR)", "MongoDB Atlas", "Cloud Deployment"],
+    link: "https://github.com/elahari16/MILTRANS-Context-Aware-AI-Translation-Engine-for-Military-Standard-Operating-Procedures",
+    certificateLink: "/myprofile/certificates/project 2.pdf"
   },
   {
     id: 3,
     title: "Mini Social Media App with Toxic Comment Classification",
     category: "Machine Learning",
     imageUrl: "/myprofile/icon/toxic comment classification.png",
-    description: "🎯 PERFORMANCE: Achieved 87% accuracy in toxic comment detection with <200ms response time. Built a mini social app with real-time toxic comment filtering using logistic regression model via Flask API. Analyzes and flags inappropriate content before posting.",
+    description: "Mini social app with real-time toxic-comment filtering via a Flask ML API. Analyzes and flags inappropriate content before posting using a logistic regression model.",
     technologies: ["Python", "Flask", "Node.js", "MongoDB", "Scikit-learn"],
     link: "https://github.com/elahari16/social_media_comment_classification"
   },
@@ -50,10 +50,19 @@ const projects: Project[] = [
     id: 4,
     title: "Medical Product Supply Chain System",
     category: "Web Development",
-    imageUrl: "https://images.pexels.com/photos/4482900/pexels-photo-4482900.jpeg?auto=compress&cs=tinysrgb&w=800",
+    imageUrl: "https://images.pexels.com/photos/4483608/pexels-photo-4483608.jpeg?auto=compress&cs=tinysrgb&w=1200",
     description: "Built a comprehensive medical inventory and distribution system with real-time order tracking. The platform connects medical suppliers with healthcare facilities, optimizing the supply chain and ensuring timely delivery of critical medical products.",
     technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap", "jQuery"],
     link: "https://github.com/elahari16/Medical-products-supply-chain"
+  },
+  {
+    id: 5,
+    title: "Billing App for Fruit Shop",
+    category: "App Development",
+    imageUrl: "https://images.pexels.com/photos/19224085/pexels-photo-19224085.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    description: "A React billing application for retail fruit shops that generates itemized bills on a custom letterhead and exports them as shareable/printable images, streamlining day-to-day checkout for small shop owners.",
+    technologies: ["React", "Vite", "Tailwind CSS", "html2canvas"],
+    link: "https://github.com/elahari16/-Billing-app-for-fruit-shop"
   }
 ];
 
@@ -95,12 +104,10 @@ const Projects: React.FC = () => {
       <ProjectsAnimation />
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12">
-          <span className="inline-block py-1 px-3 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 text-sm font-medium mb-4">
-            My Work
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-serif">Featured Projects</h2>
-          <p className="text-dark-600 dark:text-dark-300 max-w-2xl mx-auto">
-            Explore a selection of my data science and machine learning projects, showcasing my expertise in AI and software development.
+          <span className="section-tag mb-4">// my_work</span>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-serif text-dark-900 dark:text-white">Featured <span className="gradient-text">Projects</span></h2>
+          <p className="text-dark-600 dark:text-dark-400 max-w-2xl mx-auto">
+            A selection of my computer-vision, NLP and machine-learning work — ordered by relevance to data science and CV roles.
           </p>
         </div>
         
@@ -109,10 +116,10 @@ const Projects: React.FC = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`py-2 px-4 rounded-full text-sm font-medium transition-colors ${
-                activeCategory === category 
-                  ? 'bg-primary-600 text-white dark:bg-primary-500' 
-                  : 'bg-white dark:bg-dark-800 text-dark-600 dark:text-dark-300 hover:bg-primary-50 dark:hover:bg-dark-700'
+              className={`py-2 px-4 rounded-full text-sm font-mono transition-all ${
+                activeCategory === category
+                  ? 'bg-primary-500 text-dark-950 font-semibold shadow-[0_0_16px_-2px_rgba(34,211,238,0.7)]'
+                  : 'bg-dark-800/60 border border-primary-500/20 text-dark-300 hover:text-primary-300 hover:border-primary-400/50'
               }`}
             >
               {category}
@@ -131,7 +138,7 @@ const Projects: React.FC = () => {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="bg-white dark:bg-dark-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
+              className="glass-card glass-card-hover overflow-hidden group"
             >
               <div className="relative overflow-hidden aspect-video">
                 <img 
@@ -154,13 +161,13 @@ const Projects: React.FC = () => {
                   {project.technologies.slice(0, 3).map((tech, index) => (
                     <span 
                       key={index}
-                      className="text-xs py-1 px-2 rounded bg-dark-100 dark:bg-dark-700 text-dark-600 dark:text-dark-300"
+                      className="text-xs font-mono py-1 px-2 rounded bg-primary-500/10 border border-primary-500/25 text-primary-300"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="text-xs py-1 px-2 rounded bg-dark-100 dark:bg-dark-700 text-dark-600 dark:text-dark-300">
+                    <span className="text-xs font-mono py-1 px-2 rounded bg-primary-500/10 border border-primary-500/25 text-primary-300">
                       +{project.technologies.length - 3} more
                     </span>
                   )}

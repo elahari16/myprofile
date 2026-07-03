@@ -38,23 +38,23 @@ const Contact: React.FC = () => {
           variants={containerVariants}
           className="text-center mb-12"
         >
-          <motion.span 
+          <motion.span
             variants={itemVariants}
-            className="inline-block py-1 px-3 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 text-sm font-medium mb-4"
+            className="section-tag mb-4"
           >
-            Get In Touch
+            // get_in_touch
           </motion.span>
-          <motion.h2 
+          <motion.h2
             variants={itemVariants}
-            className="text-3xl sm:text-4xl font-bold mb-4 font-serif"
+            className="text-3xl sm:text-4xl font-bold mb-4 font-serif text-dark-900 dark:text-white"
           >
-            Let's Work Together
+            Let's Work <span className="gradient-text">Together</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             variants={itemVariants}
-            className="text-dark-600 dark:text-dark-300 max-w-2xl mx-auto"
+            className="text-dark-600 dark:text-dark-400 max-w-2xl mx-auto"
           >
-            I'm always interested in new opportunities and collaborations. Feel free to reach out if you'd like to discuss data science projects or potential roles.
+            I'm always interested in new opportunities and collaborations. Feel free to reach out if you'd like to discuss computer-vision or data-science projects.
           </motion.p>
         </motion.div>
 
@@ -135,33 +135,33 @@ const Contact: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={itemVariants}
-            className="bg-white dark:bg-dark-800 rounded-2xl p-8 shadow-lg"
+            className="glass-card p-8"
           >
-            <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-bold mb-6 text-dark-900 dark:text-white">Send a Message</h3>
             <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium mb-2">Name</label>
-                <input 
-                  type="text" 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-dark-600 bg-white dark:bg-dark-700 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                <input
+                  type="text"
+                  className="w-full px-4 py-3 rounded-lg border border-primary-500/20 bg-white dark:bg-dark-900/60 text-dark-900 dark:text-dark-100 placeholder:text-dark-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
                   placeholder="Your name"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">Email</label>
-                <input 
-                  type="email" 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-dark-600 bg-white dark:bg-dark-700 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                <input
+                  type="email"
+                  className="w-full px-4 py-3 rounded-lg border border-primary-500/20 bg-white dark:bg-dark-900/60 text-dark-900 dark:text-dark-100 placeholder:text-dark-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
                   placeholder="your.email@example.com"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">Message</label>
-                <textarea 
+                <textarea
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-dark-600 bg-white dark:bg-dark-700 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-primary-500/20 bg-white dark:bg-dark-900/60 text-dark-900 dark:text-dark-100 placeholder:text-dark-500 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
                   placeholder="Tell me about your project or opportunity..."
                 />
               </div>

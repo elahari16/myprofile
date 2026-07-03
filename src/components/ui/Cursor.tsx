@@ -76,34 +76,35 @@ const Cursor: React.FC = () => {
   
   return (
     <>
+      {/* Detection reticle — square brackets that "lock on" when hovering links */}
       <motion.div
-        className="fixed top-0 left-0 w-6 h-6 rounded-full border-2 border-primary-500 dark:border-primary-400 z-[9999] pointer-events-none"
+        className="fixed top-0 left-0 z-[9999] pointer-events-none"
         animate={{
-          x: position.x - 12,
-          y: position.y - 12,
-          scale: clicked ? 0.8 : linkHovered ? 1.5 : 1,
+          x: position.x - 14,
+          y: position.y - 14,
+          scale: clicked ? 0.8 : linkHovered ? 1.4 : 1,
           opacity: hidden ? 0 : 1,
-          borderColor: linkHovered ? 'rgba(14, 165, 233, 0.5)' : 'rgba(14, 165, 233, 1)',
+          rotate: linkHovered ? 45 : 0,
         }}
-        transition={{
-          type: 'tween',
-          duration: 0.1,
-          ease: 'easeOut',
-        }}
-      />
+        transition={{ type: 'tween', duration: 0.12, ease: 'easeOut' }}
+      >
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <path d="M2 9V2h7" stroke="#22d3ee" strokeWidth="2" strokeLinecap="round" />
+          <path d="M26 9V2h-7" stroke="#22d3ee" strokeWidth="2" strokeLinecap="round" />
+          <path d="M2 19v7h7" stroke="#22d3ee" strokeWidth="2" strokeLinecap="round" />
+          <path d="M26 19v7h-7" stroke="#22d3ee" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+      </motion.div>
+      {/* center dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 bg-primary-500 dark:bg-primary-400 rounded-full z-[9999] pointer-events-none"
+        className="fixed top-0 left-0 w-1.5 h-1.5 bg-primary-300 rounded-full z-[9999] pointer-events-none shadow-[0_0_8px_rgba(34,211,238,0.9)]"
         animate={{
-          x: position.x - 4,
-          y: position.y - 4,
-          scale: clicked ? 1.2 : 1,
-          opacity: hidden ? 0 : linkHovered ? 0 : 1,
+          x: position.x - 3,
+          y: position.y - 3,
+          scale: clicked ? 1.6 : 1,
+          opacity: hidden ? 0 : 1,
         }}
-        transition={{
-          type: 'tween',
-          duration: 0.08,
-          ease: 'easeOut',
-        }}
+        transition={{ type: 'tween', duration: 0.08, ease: 'easeOut' }}
       />
     </>
   );
